@@ -1,0 +1,21 @@
+.container {
+    max-width: 600px; 
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  button {
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  

@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    @if (product) {
+      <div class="card product-detail-card mx-auto">
+        <img [src]="product.p_img" [alt]="product.p_name" class="card-img-top product-image">
+        <div class="card-body text-center">
+          <h2 class="card-title">{{ product.p_name }}</h2>
+          <p class="card-text"><strong>Price:</strong> ₹{{ product.p_cost }}</p>
+          <p class="card-text"><strong>Category:</strong> {{ product.p_cat }}</p>
+          <p class="card-text product-description">{{ product.p_desc }}</p>
+          <button class="btn btn-primary mt-3" (click)="goBack()">⬅ Back to Products</button>
+        </div>
+      </div>
+    }
+  </div>
+  

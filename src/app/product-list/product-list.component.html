@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Product Gallery</h2>
+    <div class="row">
+      @for (product of products; track product.p_id) {
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card product-card" (click)="viewDetails(product.p_id)">
+            <img 
+              [src]="product.p_img" 
+              [alt]="product.p_name"
+              class="card-img-top product-image"
+            >
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ product.p_name }}</h5>
+              <p class="card-text">₹{{ product.p_cost }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+  

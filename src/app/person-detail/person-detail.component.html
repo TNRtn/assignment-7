@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    @if (person) {
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="card-title mb-0">{{ person.name }}</h2>
+        </div>
+        <div class="card-body">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <p class="mb-2"><strong class="text-primary">Technology:</strong> <span class="badge bg-info">{{ person.technology }}</span></p>
+              <p class="mb-2"><strong class="text-primary">Experience:</strong> <span class="text-muted">{{ person.experience }}</span></p>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-2"><strong class="text-primary">Bio:</strong></p>
+              <p class="text-muted">{{ person.bio }}</p>
+            </div>
+          </div>
+          
+          <div class="mt-4">
+            <h4 class="text-primary">Projects</h4>
+            <ul class="list-group">
+              @for (project of person.projects; track project) {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  {{ project }}
+                  <span class="badge bg-secondary">Completed</span>
+                </li>
+              }
+            </ul>
+          </div>
+          
+          <div class="mt-4 text-center">
+            <a routerLink="/q4" class="btn btn-outline-primary">
+              <i class="bi bi-arrow-left"></i> Back to List
+            </a>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
